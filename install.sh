@@ -1,11 +1,20 @@
 #!/bin/bash
 
-echo "📦 Installing required packages..."
+echo "🚀 Starting Installation..."
 
-apt update -y
-apt install -y nodejs npm
+# 1. System update (Optional but good for VPS/Colab)
+apt-get update -y
 
-npm install telegraf dotenv playwright fs-extra
+# 2. Install dependencies
+echo "📦 Installing Node Modules..."
+npm install
+
+# 3. Install Playwright Browser & System Dependencies
+echo "🌐 Installing Chromium Browser..."
 npx playwright install chromium
+npx playwright install-deps chromium
 
-echo "BOT INSTALLED SUCCESSFULLY!"
+# 4. Permissions
+chmod +x run.sh
+
+echo "✅ Installation Complete! Now run: bash run.sh"
