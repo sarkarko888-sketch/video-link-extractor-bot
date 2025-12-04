@@ -1,0 +1,2 @@
+npm install telegraf dotenv playwright
+npx playwright install chromium
