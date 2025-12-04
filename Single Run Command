@@ -1,0 +1,7 @@
+git clone https://github.com/sarkarko888-sketch/video-link-extractor-bot.git && \
+cd video-link-extractor-bot && \
+echo "BOT_TOKEN=BOT_TOKEN_HERE" > .env && \
+npm install && \
+npx playwright install chromium && \
+npx playwright install-deps && \
+node bot.js
